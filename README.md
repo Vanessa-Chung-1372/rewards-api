@@ -50,7 +50,7 @@ Please assume the reviewer has not executed code in your language before when wr
 * Description: When a user has points added, we 
 * Request Body: JSON
 * Request Body Example:
-# Transaction 1: Add 300 points for DANNON
+## Transaction 1: Add 300 points for DANNON
 ```sh
 curl -X POST http://localhost:8000/add \
 -H "Content-Type: application/json" \
@@ -60,7 +60,7 @@ curl -X POST http://localhost:8000/add \
   "timestamp": "2022-10-31T10:00:00Z"
 }'
 ```
-# Transaction 2: Add 200 points for UNILEVER
+## Transaction 2: Add 200 points for UNILEVER
 ```sh
 curl -X POST http://localhost:8000/add \
 -H "Content-Type: application/json" \
@@ -70,7 +70,7 @@ curl -X POST http://localhost:8000/add \
   "timestamp": "2022-10-31T11:00:00Z"
 }'
 ```
-# Transaction 3: Subtract 200 points for DANNON
+## Transaction 3: Subtract 200 points for DANNON
 ```sh
 curl -X POST http://localhost:8000/add \
 -H "Content-Type: application/json" \
@@ -80,7 +80,7 @@ curl -X POST http://localhost:8000/add \
   "timestamp": "2022-10-31T15:00:00Z"
 }'
 ```
-# Transaction 4: Add 10,000 points for MILLER COORS
+## Transaction 4: Add 10,000 points for MILLER COORS
 ```sh
 curl -X POST http://localhost:8000/add \
 -H "Content-Type: application/json" \
@@ -90,7 +90,7 @@ curl -X POST http://localhost:8000/add \
   "timestamp": "2022-11-01T14:00:00Z"
 }'
 ```
-# Transaction 5: Add 1,000 points for DANNON
+## Transaction 5: Add 1,000 points for DANNON
 ```sh
 curl -X POST http://localhost:8000/add \
 -H "Content-Type: application/json" \
@@ -117,29 +117,31 @@ curl -X POST http://localhost:8000/spend \
 ```
 * Response: Status 200 OK if the points are added successfully.
 * Expected Response:
+```sh
 [
   { "payer": "DANNON", "points": -100 },
   { "payer": "UNILEVER", "points": -200 },
   { "payer": "MILLER COORS", "points": -4700 }
 ]
+```
 
 3. Get Points Balance
 * Method: GET
 * Endpoint: /balance
 * Description: Retrieves the current points balance for each payer for a user.
 * Request Body: NA
-* 
 ```sh
 curl -X GET http://localhost:8000/balance
 ```
 * Response: Status 200 
 * Expected Response:
+```sh
 {
 "DANNON": 1000,
 ”UNILEVER” : 0,
 "MILLER COORS": 5300
 }
-
+```
 
 ```text
 Breakdown:
