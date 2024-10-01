@@ -44,7 +44,7 @@ Please assume the reviewer has not executed code in your language before when wr
 ## Running the Service Locally on http://localhost:8000
 
 ## Endpoints
-###1. Add Points
+### 1. Add Points
 * Method: POST
 * Endpoint: /add
 * Description: When a user has points added, we 
@@ -102,7 +102,7 @@ curl -X POST http://localhost:8000/add \
 ```
 * Response: Status 200 OK if the points are added successfully.
 
-###2. Spend Points
+### 2. Spend Points
 * Method: POST
 * Endpoint: /spend
 * Description: Spends points from the user's payers, ensuring the oldest points are spent first and no payer's points go negative.
@@ -125,7 +125,7 @@ curl -X POST http://localhost:8000/spend \
 ]
 ```
 
-###3. Get Points Balance
+### 3. Get Points Balance
 * Method: GET
 * Endpoint: /balance
 * Description: Retrieves the current points balance for each payer for a user.
@@ -143,7 +143,7 @@ curl -X GET http://localhost:8000/balance
 }
 ```
 
-##Breakdown:
+## Breakdown:
 ```text
 Adding Rewards:
 DANNON has:
