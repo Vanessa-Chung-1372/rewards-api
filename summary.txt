@@ -1,0 +1,30 @@
+1. Why did you choose the tools, libraries, and language you used for the coding exercise?
+Ans: Node.js with Express has less boilerplate and simpler setup, allowing for rapid development, 
+especially for small APIs like the rewards-api.Also, Express.js is lightweight, flexible, and easy to use, 
+making it perfect for a simple Rewards API.JavaScript natively handles JSON, making it simpler to manage API request and response data.
+#Language: JavaScript
+#Runtime: Node.js
+#Framework: Express.js
+I chose Node.js with Express because it offers a lightweight, fast, and flexible environment for building APIs. 
+Node.js allows for efficient handling of asynchronous operations, which is ideal for managing multiple requests 
+in an API like the rewards system. Express simplifies routing and middleware integration, reducing boilerplate 
+code and speeding up development, especially for small-scale APIs like this one.
+I selected JavaScript because it allows for rapid development. Also, JavaScript’s native handling of JSON made 
+managing API request and response data simpler and more efficient.
+#Libraries
+    * uuid: for generating unique IDs.
+    * bintrees: for efficient data structure management (Red-Black Tree). 
+    A binary tree library that provides efficient data structures like Red-Black Trees. 
+    It is used to keep track of reward records sorted by timestamp in a First-In-First-Out (FIFO) manner.
+    A Red-Black tree is a variation of a Binary Tree that balances itself.
+    Red-Black Tree ensures fast lookup and insertion with O(log n) time complexity.
+#Tools:
+    * npm: for package management.
+    * Postman and cURL: for API testing and debugging.
+
+2. What are the advantages and disadvantages of your solution?
+Ans: The advantage of my solution is that it follows the MVC (Model-View-Controller) architecture, which promotes a clear and organized structure by separating concerns. This makes the code more maintainable and scalable. For example, if I need to change the database, I only have to modify the DAO (Data Access Object) layer without affecting the rest of the system. Similarly, adding new APIs or features is straightforward since each component—model, controller, and service—can be modified independently. This flexibility improves the ease of expansion and updates. However, the disadvantage of using MVC is that it can lead to a more complex project structure, with code divided across multiple files and folders, which might feel overwhelming for smaller projects or new developers. This can sometimes add unnecessary complexity for simpler applications.
+
+
+3. What has been a favorite school/personal project thus far? What about it that challenged you?
+Ans: One of my favorite projects was integrating a real-time trading system with an order placement system when I was a product manager in the trading desk. I acted as the liaison between sales, traders, and the software engineering team. The biggest challenge was that user requirements from the sales and trading teams were often incomplete, making it difficult for the engineers to fully understand the needed features. This caused a lot of back-and-forth communication, particularly around the workflows for each feature. To overcome this, I organized discussions with all users to clarify user workflows and bridge the communication gap. Through persistent collaboration, I successfully defined the requirements and delivered the solution. This experience taught me that the hardest part of any project is often defining the problem clearly, which heavily relies on accurately capturing user workflows early in the development life cycle.
