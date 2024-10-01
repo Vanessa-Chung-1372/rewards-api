@@ -1,4 +1,4 @@
-const rewardService = require('../services/rewardService');
+const rewardService = require('../service/RewardService');
 class RewardController {
     constructor() {
         // Instantiate the service

@@ -2,7 +2,7 @@
 routing requests to the appropriate controller methods. 
 It also starts the server on port 8000.*/
 const express = require('express');
-const RewardController = require('./controllers/RewardController');
+const RewardController = require('./controller/RewardController');
 
 const app = express();
 const port = 8000;

@@ -1,4 +1,4 @@
-const RewardDao = require('../dao/rewardDao');
+const RewardDao = require('../dao/RewardDao');
 
 class RewardService {
     constructor() {
