@@ -12,10 +12,6 @@ class RewardService {
      * @param {Date} timestamp - The timestamp of the transaction.
      */
     addReward(payer, points, timestamp) {
-        console.log("in rewardService.addReward()");
-        console.log("payer: " + payer);
-        console.log("points: " + points);
-        console.log("timestamp: " + timestamp);
         const reward = { payer, points, timestamp };
         
         const newReward = this.rewardDao.createReward(payer, points, timestamp);
@@ -26,9 +22,7 @@ class RewardService {
      * @returns {Map} - Map of payer balances.
      */
     getPointsBalance() {
-        // console.log("rewardService.getPointsBalnace()");
         const map = this.rewardDao.getPointsBalance();
-        // console.log(map);
         return map;
     }
     /**
@@ -49,7 +43,6 @@ class RewardService {
      * @returns {Array} - Breakdown of points deducted from each payer.
      */
     spendPoints(pointsToSpend) {
-        console.log("in RewardService.spendPoints()");
         return this.rewardDao.spendPoints(pointsToSpend);
     }
 }

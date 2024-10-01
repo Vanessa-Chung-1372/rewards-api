@@ -43,7 +43,6 @@ class RewardController {
             if (totalPoints < points) {
                 return res.status(400).send('User does not have enough points.');
             }
-            console.log("in RewardController.spendPoints()");
             // Spend the points based on FIFO logic
             const spentPoints = this.rewardService.spendPoints(points);
             const spentPointsObject = Object.fromEntries(spentPoints);
@@ -60,9 +59,7 @@ class RewardController {
      */
      getPointsBalance(req, res){
         try {
-            console.log("rewardController.getPointsBalnace()");
             const balanceMap = this.rewardService.getPointsBalance();
-            // console.log(balanceMap);
             const balanceObject = Object.fromEntries(balanceMap);
             return res.status(200).json(balanceObject);
         } catch (error) {
